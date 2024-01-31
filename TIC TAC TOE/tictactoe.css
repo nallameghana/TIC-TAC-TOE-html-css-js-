@@ -1,0 +1,60 @@
+body {
+  background-color: #cdb4db;
+  text-align: center;
+}
+h1 {
+  color: #5e548e;
+  text-shadow: 0 0 0.5rem #9f86c0;
+}
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game {
+  height: 60vh;
+  width: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5vh;
+}
+.box {
+  height: 18vh;
+  width: 18vh;
+  border-radius: 0.5rem;
+  font-size: 6vh;
+  background-color: #edede9;
+  border: 1.5px solid #ffafcc;
+  box-shadow: 0 0 0.5rem #ffc8dd;
+}
+#reset {
+  height: 6vh;
+  width: 18vh;
+  font-size: medium;
+  border: 1.5px solid #a2d2ff;
+  box-shadow: 0 0 0.5rem #bde0fe;
+  background-color: #caf0f8;
+  color: #023e8a;
+}
+
+#msg {
+  color : #ffff3f;
+  font-size:x-large;
+}
+
+#newgame {
+  height: 6vh;
+  width: 18vh;
+  font-size: medium;
+  border: 1.5px solid #6ede8a;
+  box-shadow: 0 0 0.5rem #b7efc5;
+  background-color: #b7efc5;
+  color: #155d27;
+}
+
+.messageCls.hide {
+  display : none;
+}
