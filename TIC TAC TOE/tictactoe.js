@@ -36,17 +36,17 @@ boxes.forEach((box) => {
 function disableBoxes() {
   boxes.forEach((box) => {
     box.disabled = true;
-  })
+  });
 }
 
 function enableBoxes() {
   messageClass.classList.add("hide");
   turnX = true;
-  c = 0;
+  count = 0;
   boxes.forEach((box) => {
     box.disabled = false;
     box.innerText = "";
-  })
+  });
 }
 
 function printMessage(pos1_value) {
@@ -60,27 +60,28 @@ function tie() {
 }
 
 function checkWinner() {
+  let f = 0;
   for (let pattern of win_seq) {
     let pos1_value = boxes[pattern[0]].innerText;
     let pos2_value = boxes[pattern[1]].innerText;
     let pos3_value = boxes[pattern[2]].innerText;
     if (pos1_value != "" && pos2_value != "" && pos3_value != "") {
       if (pos1_value === pos2_value && pos2_value === pos3_value) {
+        f = 1;
         printMessage(pos1_value);
         disableBoxes();
       }
-      else {
-        if(count == 9) {
-          c = 0;
-          tie();
-          disableBoxes();
-        }
-      }
     }
+  }
+  if (count == 9 && f !== 1) {
+    count = 0;
+    tie();
+    disableBoxes();
   }
 }
 
 resetGame.addEventListener("click", enableBoxes);
 newGame.addEventListener("click", enableBoxes);
+
 
 
